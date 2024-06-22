@@ -480,11 +480,72 @@ header {
 .buttun-schedule a {
     text-decoration: none;
     color: #fff;
+
+
  }
 
+ 
   /**************************/
 /* Section Schedule */
 /**************************/
+
+
+ #schedule {
+    margin-bottom: 5rem;
+ }
+ .schedule {
+    background-image: url("https://templatemo.com/templates/templatemo_548_training_studio/assets/images/schedule-bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 7.5rem 0px;
+    
+ }
+ .week_days li .monday {
+    color: red;
+ }
+ .training_time {
+    margin-top: 2rem;
+    
+    text-align: center;
+    
+ }
+ .training_time table {
+    width: 100%;
+ }
+ .heading_schedule h2 {
+    color: #fff;
+ }
+ .heading_schedule p{
+    color: #fff;
+    line-height: 1.5625rem;
+    font-size: 0.875rem;
+    
+ }
+ table, td{
+    
+    border: 1px solid;
+    color: #fff;
+    /* border: none; */
+    border-collapse: collapse;
+    
+  }
+  td {
+    /* border: none; */
+  }
+  .week_days li {
+    color: #fff;
+  }
+  .week_days li:hover {
+    color: #ed563b;
+    cursor: pointer;
+  }
+  .week_days li:first-child{
+    color: #ed563b;
+  }
+ 
+
+
 .schedule {
     /* height: calc(100vh - 4.5rem); */
    /* height: 70vh; */
@@ -513,6 +574,7 @@ header {
 .week_day {
     display: flex;
     margin-top: 4rem;
+    gap: 2rem;
 
 }
 .week_days li {
@@ -525,12 +587,16 @@ header {
     justify-content: center;
 }
 .training_time table tbody tr td {
-border-radius: 1px solid #000;
+/* border-radius: 1px solid #000; */
 height: 100px;
 }
 
 
 /* expert trainers */
+.expert {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
 .expert_trainers {
     margin-top: 4rem;
     display: grid;
@@ -819,4 +885,7 @@ fieldset  {
     .contact_form {
         /* margin-top: 2rem; */
     }
+    .training_time table {
+        width: 100%;
+     }
 }
