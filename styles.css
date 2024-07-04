@@ -9,15 +9,6 @@
     padding: 0;
 }
 
-html {
-    /* font-size: 10px; */
-
-  /* 10px / 16px = 0.625 = 62.5% */
-  /* Percentage of user's browser font-size setting */
-
-    /* font-size: 62.5%; */
-    /* overflow-x: hidden; */
-}
 
 body {
     font-family: "Poppins", sans-serif;
@@ -34,10 +25,8 @@ body {
 /**************************/
 
 .container {
-    /* max-width: 100rem; */
-    /* padding: 0 3.2rem; */
-    width: min(90%, 1120px);
 
+    max-width: min(90%, 1120px);
     margin-inline: auto;
 }
 
@@ -53,15 +42,11 @@ body {
 }
 
 header {
-    /* background-color: #fafafa; */
-    background-color: rgb(33, 37, 41);  
-    height: 5rem;
+    background-color: rgb(164, 165, 165);  
+    padding: .8rem;
     width: 100%;
-    /* position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px; */
     z-index: 100;
+    
    
 
 }
@@ -74,7 +59,6 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0.75rem 1.25rem;
 }
 .desktop-menu .logo {
     list-style: none;
@@ -95,7 +79,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+
 }
 
 .desktop-menu_links li {
@@ -117,11 +101,11 @@ header {
 .desktop-menu_links .buttun-main_nav {
     display: inline-block;
     font-size: 0.8125rem;
-    padding: 11px 17px;
     background-color: #ed563b;
     height: auto;
     font-weight: 400;
     line-height: 20px;
+    letter-spacing: 0px;
 }
 
  /**************************/
@@ -147,6 +131,10 @@ header {
     height: auto;
     font-weight: 400;
     line-height: 20px;
+    color: #fff;
+}
+.btn-mobile {
+    color: #fff !important;
 }
 
 .mobile-menu_links li  {
@@ -155,31 +143,40 @@ header {
 
 .mobile-menu_links li {
     list-style: none;
-    padding-left: 1.25rem ;
     padding-right: 1.25rem;
 }
-.mobile-menu_links li a {
+.mobile-menu_links .menu-link a {
     text-decoration: none;
-    display: block;
     font-weight: 500;
-    font-size: 1.125rem;
+    font-size: 1rem;
     text-transform: uppercase;
     line-height: 2.5rem;
     height: 2.5rem;
-    color: #fff;
-    /* background-color: #007bff; */
+    color: #232d39;
    
 }
-
+.first a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: 2.5rem;
+    height: 2.5rem;
+    color: #ed563b;
+}
+.btn-mobile a {
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
  /**************************/
 /* Hero and vedio section */
 /**************************/
 
 .hero {
-     /* height: 70vh;  */
-    /* width: 100%; */
     height: calc(100vh - 4.5rem);
-    /* background-color: #007bff; */
     position: relative;
 }
 .bg-vedio__content {
@@ -196,14 +193,10 @@ header {
     height: 100%;
     width: 100%;
     z-index: -1; 
-     opacity: .3;
+     opacity: .2;
     overflow: hidden;
     display: flex;
     
-}
-.hero-content {
-    /* position: relative; */
-    /* width: 100%; */
 }
 
 .vedio-content {
@@ -241,7 +234,6 @@ header {
     color: #fff;
     padding: 12px 20px;
     text-transform: uppercase;
-    /* width: 100%; */
     text-decoration: none;
 }
 
@@ -489,10 +481,6 @@ header {
 /* Section Schedule */
 /**************************/
 
-
- #schedule {
-    /* margin-bottom: 5rem; */
- }
  .schedule {
     background-image: url("https://templatemo.com/templates/templatemo_548_training_studio/assets/images/schedule-bg.jpg");
     background-position: center center;
@@ -526,15 +514,8 @@ header {
     
     border: 1px solid;
     color: #fff;
-    /* border: none; */
     border-collapse: collapse;
     
-  }
-  td {
-    /* border: none; */
-  }
-  .week_days li {
-    color: #fff;
   }
   .week_days li:hover {
     color: #ed563b;
@@ -544,41 +525,29 @@ header {
     color: #ed563b;
   }
  
-
-
-.schedule {
-    /* height: calc(100vh - 4.5rem); */
-   /* height: 70vh; */
-    /* margin-top: 10rem; */
-    /* background-color: #007bff; */
-    margin-top: 14rem;
-    padding: 0px 0px 140px 0px;
-    /* background-image: url("https://templatemo.com/templates/templatemo_548_training_studio/assets/images/schedule-bg.jpg"); */
-    background-position: center center;
-    background-repeat: no-repeat ;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    padding: 120px 0px;
-}
- .schedule_back {
-    /* padding: 0px 0px 140px 0px;
-    background-image: url("https://templatemo.com/templates/templatemo_548_training_studio/assets/images/schedule-bg.jpg");
-    background-position: center center;
-    background-repeat: no-repeat ;
-    background-size: cover;
-    width: 100%;
-    padding: 120px 0px; */
-    /* margin-top: 80px; */
-}
+ 
 .week_day {
     display: flex;
     margin-top: 4rem;
-    gap: 2rem;
+    /* gap: 2rem; */
+    width: 100%;
 
 }
-.week_days li {
-    list-style: none;
+
+.week_day ul {
+    padding: 0;
+    text-align: center;
+}
+.week_day ul li {
+list-style: none;
+display: inline;
+cursor: pointer;
+position: relative;
+margin-right: 10px;
+font-size: 0.9375rem;
+font-weight: 500;
+color: #fff;
+text-transform: capitalize;
 }
 
 .week_days {
@@ -587,8 +556,13 @@ header {
     justify-content: center;
 }
 .training_time table tbody tr td {
-/* border-radius: 1px solid #000; */
 height: 100px;
+}
+.day_filter::after{
+    content: '/';
+    margin-left: 10px;
+    color: #fff;
+   
 }
 
 
@@ -609,9 +583,6 @@ height: 100px;
     box-shadow: 0px 0px 15px rgba(0,0,0,.1);
     border-radius: 8px;
     padding: 2rem;
-}
-.img_trainer img {
-    /* width: 100%; */
 }
 .expert_content span {
     font-size: 0.8125rem;
@@ -653,7 +624,6 @@ height: 100px;
 /* map and forms */
 #sec_map {
     margin-top: 5rem;
-    /* height: 70vh; */
 }
 .map_forms {
     display: grid;
@@ -670,11 +640,7 @@ height: 100px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* display: flex;
-    background-color: #8f1b1b;
-    padding: 40px;
-    border-radius: 5px;
-    display: inline-block; */
+
 
 }
 .form #contact {
@@ -683,16 +649,9 @@ height: 100px;
     border-radius: 5px;
     align-items: center;
 }
-/* .form {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-} */
+
 .form_row {
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* margin-right: -15px; */
-    /* margin-left: -15px; */
+    
     gap: 2rem;
     width: 100%;
    
@@ -710,15 +669,12 @@ height: 100px;
     resize: none;
 }
 
-.col_name input {
-    /* max-width: 100%; */
-}
+
 .contact_form input , textarea {
     color: #7a7a7a;
     font-size: 0.8125rem ;
     border: 1px solid #ddd;
     background-color: #fff;
-    /* width: 100%; */
     height: 40px;
     outline: none;
     padding: 0px 10px;
@@ -726,18 +682,12 @@ height: 100px;
     appearance: none;
 }
 .col_name fieldset {
-    /* width: 100%; */
     display: inline-block;
     width: 100%;
     
 }
 fieldset  {
     border: none;
-    /* padding: 10px 20px; */
-}
-.col_name {
-    
-    /* max-width: 50%;  */
 }
 
 footer {
@@ -748,6 +698,7 @@ footer {
 .footer_content {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .footer_content p {
     color: #232d39;
@@ -758,51 +709,76 @@ footer {
     cursor: pointer;
     color: #ed563b;
     text-decoration: none;
+    font-size: 0.8125rem;
 }
-/* mobile and tablet */
- /* @media (max-width: 1280px) {
-    .hero {
-        width: 100%;
+
+/* medium screan */
+@media (max-width: 1268px) {
+    
+    
+    .desktop-menu .logo {
+        font-size: 8.5rem;
+       }
+    .desktop-menu_links li {
+        padding-left: 0 ;
+        padding-right: 1.25rem;
     }
-    .hero-content p {
-        font-size: 1rem;
+    .desktop-menu_links .buttun-main_nav {
+        padding: 4px 8px;
+    }
+    .hero-content h6 {
+        font-size: 2rem;
         color: #fff;
         text-transform: uppercase;
     }
     .vedio-content h2 {
-        font-size: 1.5rem;
+        font-size: 2.25rem;
         color: #fff;
         text-transform: uppercase;
+        font-weight: 800;
     }
+    
+    .desktop-menu .logo {
+        font-size: 1.125rem;
+    }
+    .mobile-menu_links li:not(:last-child){
+        border-bottom: 2px solid rgba(57, 35, 35, 0.3);
+    
+    }
+
+    .vedio-content h2 {
+        font-size: 4rem;
+    }
+    
+     /* expert trainers */
+   
+     .img_trainer img {
+        width: 100%;
+    }
+    .map iframe {
+        width: 100%;
+       
+    }
+
+   
+    .training_time table {
+        width: 100%;
+     }
+   
+}
     .desktop-menu h1{
         font-size: 1rem;
     }
     .menu-links li a, .menu-links a{
         font-size: 1rem;
     }
-    .sec_content {
-        grid-template-columns: 1fr;
-       }
-       .right-content {
-        margin-inline: 2rem;
-       }
-       .right-content img {
-        margin-top: 2rem;
-       }
-       .mobile-menu {
+    .mobile-menu {
         display: none;
-       }
-       .btn-mobile {
-        display: none;
-       }
-}  */
-
-
-
+    }
 
 
  /**************************/
-/* mobile and Tablet navigations */
+/* mobile and Tablet  */
 /**************************/
 @media (max-width: 768px) {
     header {
@@ -834,10 +810,14 @@ footer {
         right: 10%;
         font-size: 2.25rem;
         z-index: 99999;
+        
     }
-    .desktop-menu .logo {
-        font-size: 8.5rem;
+    .desktop-menu  {
+        padding: .4rem;
        }
+    .desktop-menu .logo {
+        color: #000;
+    }
     .hero-content h6 {
         font-size: 2rem;
         color: #fff;
@@ -854,7 +834,7 @@ footer {
         flex-direction: column; 
         position: fixed;   
         color: #232d39;
-        background-color: #c9c7c9;
+        background-color: #f8f8f8;
         inset: 5rem;
         transform: translateY(-260%);
         transition: transform .3s ease-in-out;
@@ -878,16 +858,7 @@ footer {
     .hamburger i[data-visible = "false"]{
         display: none;
     }
-    /* .hero {
-        width: 100%;
-    }
-    .container {
-        margin: 0px;
-        padding: 0px;
-    }
-     body {
-        align-items: center;
-     } */
+   
 
     .vedio-content h2 {
         font-size: 4rem;
@@ -899,9 +870,7 @@ footer {
      .sec_content {
         grid-template-columns: 1fr;
      }
-     .our_classes {
-        /* height: 100%; */
-     }
+     
 
      /* expert trainers */
      .expert_trainers {
@@ -911,68 +880,50 @@ footer {
         width: 100%;
     }
     .map iframe {
-        /* width: 100%; */
+    
         height: 60vh;
     }
     
     .map_forms  {
         grid-template-columns: 1fr;
     }
-    .contact_form {
-        /* margin-top: 2rem; */
-    }
+ 
     .training_time table {
         width: 100%;
      }
+     .day_filter::after{
+        content: '/';
+        margin-left: 5px;
+        color: #fff;
+       
+    }
+    .week_days {
+        display: flex;
+        justify-content: center;
+    }
+    .week_day {
+        padding: 10px;
+    }
 }
 
 /**************************/
-/* BELOW 544px (Phones) */
+/* BELOW 544px (small screans) */
 /**************************/
 @media (max-width: 544px) {
 
-     .hamburger {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: #2b2b2b;
-        top: 10px;
-        width: 50px;
-        height: 50px;
-        right: 10%;
-        font-size: 3rem;
-        z-index: 99999;
-    }
-
-    .mobile-menu  {
-        display: flex; 
-       flex-direction: column; 
-       position: fixed;   
-       color: #232d39;
-       background-color: #c9c7c9;
-       inset: 5rem;
-       transform: translateY(-260%);
-       transition: transform .3s ease-in-out;
-       z-index: 99999;
-       
-   
-   }
-   .desktop-menu .logo {
+.desktop-menu .logo {
     font-size: 1.5rem;
    }
-   .mobile-menu_links {
-
-   }
-   .hero {
-    width: 100%;
-   }
-   .mobile-menu_links li {
+  
+.mobile-menu_links li {
     list-style: none;
     padding-left: 0px ;
     padding-right: 0px;
 }
+.mobile-menu_links li a {
+    font-size: .8rem;
+}
+
 .hero-content h6 {
     font-size: 2rem;
     color: #fff;
@@ -986,7 +937,9 @@ footer {
 }
 .week_days {
     display: flex;
-    gap: 1rem;
+    gap: .2rem;
     justify-content: center;
 }
+
+
 }
